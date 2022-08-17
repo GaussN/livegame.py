@@ -50,6 +50,9 @@ class App:
     
     
     def update_game(self):
+        if pyxel.btn(pyxel.KEY_Q):
+            return pyxel.run(self.update_set, self.draw)
+                    
         x, y = 0, 0
         while y < len(self.__field):
             while x < len(self.__field[y]):
